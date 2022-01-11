@@ -4,8 +4,12 @@ import datetime
 import schedule
 from fbprophet import Prophet
 
-access = "X3lCoKLLqoNYFouOXRPOahtX9pAKSeK7qW10VEfu"
-secret = "xG14t7seRTnSg3XFQ1dt0XrB82jEAqGsIZayl4rP"
+### 객체설정 ###
+f = open("upbit_API.txt")
+lines = f.readlines()
+access = lines[0].strip()
+secret = lines[1].strip()
+f.close()
 
 def get_target_price(ticker, k):
     """변동성 돌파 전략으로 매수 목표가 조회"""

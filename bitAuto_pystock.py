@@ -2,15 +2,12 @@ import pyupbit
 import time
 import datetime
 
-#### 객체설정 ###
-# f = open("upbit.txt")
-# lines = f.readlines()
-# access = lines[0].strip()
-# secret = lines[1]. strip()
-# f.close()
-
-access = "X3lCoKLLqoNYFouOXRPOahtX9pAKSeK7qW10VEfu"
-secret = "xG14t7seRTnSg3XFQ1dt0XrB82jEAqGsIZayl4rP"
+### 객체설정 ###
+f = open("upbit_API.txt")
+lines = f.readlines()
+access = lines[0].strip()
+secret = lines[1].strip()
+f.close()
 
 upbit = pyupbit.Upbit(access, secret)
 
